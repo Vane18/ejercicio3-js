@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interacción con JQuery</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body class="bg-light text-center py-5">
+    <div class="container">
+        <h1 id="page-title" class="text-black mb-4">¡Mirá la siguiente imagen!</h1>
+        <div class="mb-4">
+            <button id="hide-btn" class="btn btn-danger mx-2">Ocultar Imagen</button>
+            <button id="show-btn" class="btn btn-success mx-2">Mostrar Imagen</button>
+        </div>
+        <img id="image" src="https://media.ambito.com/p/c78124e38ab15948eabb856c9e9aec23/adjuntos/239/imagenes/040/169/0040169785/mascotas-perrosjpg.jpg" class="img-fluid rounded shadow" alt="Imagen de ejemplo">
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#hide-btn").click(function () {
+                $("#image").hide();
+                $("#page-title").text("La imagen está oculta");
+            });
+            $("#show-btn").click(function () {
+                $("#image").show();
+                $("#page-title").text("¡La imagen se ve!");
+            });
+        });
+    </script>
+</body>
+</html>
